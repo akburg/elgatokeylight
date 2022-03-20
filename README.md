@@ -17,6 +17,6 @@ credit: https://vninja.net/2020/12/04/automating-elgato-key-lights-from-touch-ba
 
 You need to change the local IP address of the lights based on your local setup in the script.  The rest of the key/value pairs to configure the light are self-expalantory.
 
-Good luck!
+May you see the light! 🔦 😆
 
 Akbur Ghafoor
