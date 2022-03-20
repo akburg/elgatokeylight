@@ -17,7 +17,7 @@ credit: https://vninja.net/2020/12/04/automating-elgato-key-lights-from-touch-ba
 
 You need to change the local IP address of the lights based on your local setup in the script.  The rest of the key/value pairs to configure the light are self-expalantory.
 
-##Running the script and testing if everything works##
+_**Running the script and testing if everything works**_
 
 You can run the script using Terminal, download the .sh file, edit it and run:
 
@@ -25,7 +25,7 @@ You can run the script using Terminal, download the .sh file, edit it and run:
 
 and this will start to monitor your stream log.  Open any app that uses your web camera, maybe **Photo Booth** and see if your light(s) come on.  If they do not, check that you have entered the correct IP address for your light(s).  Easiest way to identify the IP address is to use the **Elgato Control Center** utility > **Key light settings** > and note the IP address for each light.
 
-_Executing the shell script automatically_
+**_Executing the shell script automatically_**
 
 If (like me) you prefer to run the bash script everytime you start-up up your Mac to avoid starting it manually, you can goto **Users and Groups** > **Login Items** tab > and plus in your bash script.  You can check the _Hide_ button won't show the terminal window.
 
