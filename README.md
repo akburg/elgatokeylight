@@ -3,7 +3,7 @@ Automate Elgato Key Light Air to switch on automatically when you join a Google 
 
 I've found it a hassle to remember to switch my lights on and off as I join various video calls throughout the day.  This bash script (works for Mac OS Monterey 12.x or later) monitors the Mac OS stream log and runs a curl command to activate the lights.
 ## Configuration
-See `config.example.sh` for an example of how to configure the script.  You can copy this file to `config.sh` and edit it to suit your needs.
+See `example.env` for an example of how to configure the script.  You can copy this file to `.env` and edit it to suit your needs.
 
 ## Running the script
 ### Running the script and testing if everything works
@@ -32,8 +32,8 @@ This will check the last hour of the stream log and check the status of the came
 
 ### Turning the Engato Key Light Air On and Off
 
-`curl --location --request PUT 'http://<light IP address>:9123/elgato/lights' --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":162,"on":1}],"numberOfLights":1}'` 
-  
+`curl --location --request PUT 'http://<light IP address>:9123/elgato/lights' --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":162,"on":1}],"numberOfLights":1}'`
+
 credit: https://vninja.net/2020/12/04/automating-elgato-key-lights-from-touch-bar/
 
 May you see the light! 🔦 😆

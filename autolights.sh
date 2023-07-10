@@ -1,7 +1,7 @@
 #!/bin/bash
 script_path=$(dirname "$(realpath "$0")")
 
-config_file="$script_path/config.sh"
+config_file="$script_path/.env"
 
 # Check if the configuration file exists
 if [ ! -f "$config_file" ]; then
@@ -11,6 +11,34 @@ fi
 
 # Load the configuration file
 source "$config_file"
+
+# Check if required variables are defined
+if [ -z "${ip_addresses+x}" ]; then
+  echo "Error: ip_addresses variable is not defined in the configuration file."
+  exit 1
+fi
+
+if [ -z "${brightness+x}" ]; then
+  echo "Error: brightness variable is not defined in the configuration file."
+  exit 1
+fi
+
+if [ -z "${temperature+x}" ]; then
+  echo "Error: temperature variable is not defined in the configuration file."
+  exit 1
+fi
+
+# Validate brightness value
+if (( brightness < 1 || brightness > 100 )); then
+  echo "Error: Invalid brightness value in the configuration file."
+  exit 1
+fi
+
+# Validate temperature value
+if (( temperature < 143 || temperature > 344 )); then
+  echo "Error: Invalid temperature value in the configuration file."
+  exit 1
+fi
 
 # Validate brightness value
 if (( brightness < 1 || brightness > 100 )); then
@@ -29,7 +57,7 @@ turn_on_lights() {
   local ip=$1
   local brightness=$2
   local temperature=$3
-  
+
   echo -e "\nCamera is activated, turn on the lights."
   curl --location --request PUT "http://$ip:9123/elgato/lights" \
     --header 'Content-Type: application/json' \
@@ -39,7 +67,7 @@ turn_on_lights() {
 # Function to turn off the lights
 turn_off_lights() {
   local ip=$1
-  
+
   echo -e "\nCamera is deactivated, turn off the lights."
   curl --location --request PUT "http://$ip:9123/elgato/lights" \
     --header 'Content-Type: application/json' \
