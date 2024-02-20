@@ -7,7 +7,13 @@ I've found it a hassle to remember to switch my lights on and off as I join vari
 
 `log stream --predicate 'subsystem == "com.apple.UVCExtension" and composedMessage contains "Post PowerLog"'`
 
-essentially monitors the stream log on Mac OS and filters out any video capture on Mac OS 12.X (Monterey), for older versions of Mac OS, check out the good work at: https://gist.github.com/jptoto/3b2197dd652ef13bd7f3cab0f2152b19 for that.
+essentially monitors the stream log on Mac OS and filters out any video capture on Mac OS 12.X (Monterey).
+
+###Monitoring camera stream on Mac OS 14.x (Sonoma)###
+
+`log stream --predicate 'composedMessage contains "AVFCapture"'`
+
+For older versions of Mac OS, check out the good work at: https://gist.github.com/jptoto/3b2197dd652ef13bd7f3cab0f2152b19 for that.
 
 ###Turning the Engato Key Light Air On and Off###
 
@@ -21,9 +27,9 @@ _**Running the script and testing if everything works**_
 
 You can run the script using Terminal, download the .sh file, edit it and run:
 
-`sh autolights.sh`
+`sh autolights_sonoma.sh`
 
-and this will start to monitor your stream log.  Open any app that uses your web camera, maybe **Photo Booth** and see if your light(s) come on.  If they do not, check that you have entered the correct IP address for your light(s).  Easiest way to identify the IP address is to use the **Elgato Control Center** utility > **Key light settings** > and note the IP address for each light.
+assuming you are using Sonoma, and this will start to monitor your stream log.  Open any app that uses your web camera, maybe **Photo Booth** and see if your light(s) come on.  If they do not, check that you have entered the correct IP address(es) for your light(s).  Easiest way to identify the IP address is to use the **Elgato Control Center** utility > **Key light settings** > and note the IP address for each light.
 
 **_Executing the shell script automatically_**
 
