@@ -33,7 +33,7 @@ assuming you are using Sonoma, and this will start to monitor your stream log.  
 
 **_Executing the shell script automatically_**
 
-If (like me) you prefer to run the bash script everytime you start-up up your Mac to avoid starting it manually, you can goto **Users and Groups** > **Login Items** tab > and plus in your bash script.  You can check the _Hide_ button won't show the terminal window.
+If (like me) you prefer to auto-run the bash script everytime you start-up up your Mac to avoid starting it manually, in Sonoma go to **Settings** > **General** tab > **Login Items** tab and plus in your bash script.  In Monterey you can goto **Users and Groups** > **Login Items** tab > and plus in your bash script.
 
 May you see the light! 🔦 😆
 
