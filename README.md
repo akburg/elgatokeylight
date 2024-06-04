@@ -15,7 +15,7 @@ essentially monitors the stream log on Mac OS and filters out any video capture 
 
 For older versions of Mac OS, check out the good work at: https://gist.github.com/jptoto/3b2197dd652ef13bd7f3cab0f2152b19 for that.
 
-###Turning the Engato Key Light Air On and Off###
+###Turning the Elgato Key Light Air On and Off###
 
 `curl --location --request PUT 'http://<light IP address>:9123/elgato/lights' --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":162,"on":1}],"numberOfLights":1}'` 
   
