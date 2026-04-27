@@ -3,6 +3,9 @@ Automate Elgato Key Light Air to switch on automatically when you join a Google 
 
 I've found it a hassle to remember to switch my lights on and off as I join various video calls throughout the day.  This bash script (works for Mac OS Monterey 12.x) monitors the Mac OS stream log and runs a curl command to activate the lights.
 
+###Monitoring camera stream on Mac OS 26.x (Tahoe+)###
+This is the latest script and auto-detects the Elgato Key Light Air - so you just need to run the script as per the instructions below 'Running the script and testing if everything works'.
+
 ###Monitoring camera stream on Mac OS 12.x (Monterey)###
 
 `log stream --predicate 'subsystem == "com.apple.UVCExtension" and composedMessage contains "Post PowerLog"'`
