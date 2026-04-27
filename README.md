@@ -1,7 +1,7 @@
 # Elgato Key Light Air Automation on Mac OS
 Automate Elgato Key Light Air to switch on automatically when you join a Google Meet or Zoom call (or any app that in-fact uses a camera stream on a Mac OS) and switches it off when the stream ends.
 
-I've found it a hassle to remember to switch my lights on and off as I join various video calls throughout the day.  This bash script (works for Mac OS Monterey 12.x) monitors the Mac OS stream log and runs a curl command to activate the lights.
+I've found it a hassle to remember to switch my lights on and off as I join various video calls throughout the day.  This bash script monitors the Mac OS stream log and runs a curl command to activate the lights.
 
 **Monitoring camera stream on Mac OS 26.x (Tahoe+)**
 
